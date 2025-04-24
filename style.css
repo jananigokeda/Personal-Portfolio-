@@ -1,0 +1,456 @@
+/*Creator: Janani Gokeda
+File Name: Assignment 1
+Date:Novomber 3, 2024 
+This code will reset the default margins, padding, and border
+settings to assist with cross browser compatibility.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+body {
+background-image: url(images/new.jpg);
+font-size: 14px;
+line-height: 22px;
+color: #555555;
+background-size: cover;
+background-position: center;
+}
+/* customizing the header styles to make it match with the site */
+.head1 {
+  background-color: rgb(11, 3, 71);
+  height: 50%;
+  width: 100%;
+  color: rgb(236, 236, 241);
+  padding: 25px;
+  text-decoration:wavy;
+  font-size: 15pt;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  border-style:none;
+}
+.head1 img {
+  height: 85%;
+  width: 30%;
+  float: left;
+  position: absolute;
+  z-index: -1;
+  margin:3%;
+  border-radius: 75%;
+}
+/* customizing the nav bar to make it match with the site */
+.navLinks {
+  display: flex;
+  font-size: 16pt;
+  font-style: inherit;
+  align-items: center;
+  position: relative;
+  justify-content: right;
+  list-style-type: none;
+  border:#fff
+}
+.navLinks li a {
+  text-decoration: none;
+  color: rgb(231, 230, 239);
+  flex-grow: 0;
+  flex-shrink: 30;
+  flex-basis: 300px;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  font-style: initial;
+}
+.navLinks li a:hover{
+  color:rgb(13, 2, 43);
+  background-color: rgb(221, 215, 232);
+}
+.navLinks ul li {
+  padding: 10px;
+  border-radius: 25%;
+  font-style: italic;
+}
+/* Adjusting the image to make it match with the site */
+.bgimage {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(image/image.jpg);
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  z-index: -2;
+}
+/* Adjusting  the Search option styles to make it match with the site */
+.search input[type=text]{
+  width:400px;
+  height:45px;
+  border-radius:45px ;
+  border:none;
+}
+.search{
+  float: right;
+  margin: 5px;
+  color: white;
+  font-size: 20px;  
+}
+.search button{
+background-color:rgb(29, 12, 126);
+  color:white;
+  float:right; 
+  padding: 2px;
+  margin-right: 36px;
+  font-size: 20px;
+  border:none;
+  cursor:pointer;  
+}
+.bgimage p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25pt;
+  font-weight: bold;
+  margin-left: 30%;
+  padding: 5%;
+  color: rgb(179, 190, 199);
+  position:relative;
+  text-decoration: solid;
+  line-height: 35px;
+}
+.bgimage h1 {
+font-family: 'Times New Roman', Times, serif;
+font-size: 25pt;
+font-weight: bold;
+margin-left: 30%;
+padding: 5%;
+color: rgb(179, 190, 199);
+position:relative;
+text-decoration: solid;
+line-height: 5px;
+}
+
+.link {
+font-family: 'Times New Roman', Times, serif;
+font-size: 25pt;
+font-weight: bold;
+margin-left: 30%;
+padding: 5%;
+color: rgb(179, 190, 199);
+}
+
+.bigimage p a:link{
+
+color:gray;
+
+}
+
+.bigimage p a:visited {
+
+color:gray;
+
+}
+/* Adjusting the footer to make it match with the site */
+.Footer {
+  background-color: rgb(11, 3, 71);
+  text-align: center;
+  font-family: sans-serif;
+  font-style: italic;
+  border: transparent;
+  height: 40%;
+  width: 100%;
+  color: rgb(236, 236, 241);
+  text-decoration: wavy;
+  font-size: 14pt;
+  box-sizing: border-box;
+  padding: 1%;
+}
+
+.Footer p {  
+  text-align: left;
+}
+
+.Footer a:hover {
+  background-color: #905d5d;
+  border: transparent
+}
+
+.course-list {
+  grid-area: course-list;
+  display: flex;
+  background-color:white;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 25px;
+  box-sizing: border-box;
+}
+.course{
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 300px;
+  border:1px solid rgb(62, 93, 71);
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  
+  box-shadow: 5px 10px 10px rgb(62, 93, 71);
+}
+.course h3 {
+  text-align: center;
+  background-color: rgb(63, 62, 93);
+  color:azure;
+  border-radius: 30px 30px 1px 1px;
+  padding: 5px;
+}
+.course p {
+  text-align: center;
+}
+
+.course img {
+  width: 100%;
+  height: 200px;
+}
+/* Adding mobile style, without media queries */
+@media screen and (max-width: 800px) {
+  .head1{
+    height:100px;
+    padding:12px;
+    flex-direction: column;
+  }
+  .head1 img{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main-about {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "about-info"
+      "aside"
+      "course-list"
+    ;
+  }
+}
+@media screen and (max-width: 800px) {
+  .search input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .search input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+list-style: none;
+font-family: "Montserrat", sans-serif;
+}
+body {
+  background-image: url(images/new.jpg);
+font-size: 14px;
+line-height: 22px;
+color: #555555;
+}
+.bold {
+font-weight: 700;
+font-size: 20px;
+text-transform: uppercase;
+}
+.semi-bold {
+font-weight: 500;
+font-size: 16px;
+}
+.resume {
+width: 790px;
+height: auto;
+display: flex;
+margin: 50px auto;
+}
+.resume .resume_left {
+width: 280px;
+background: #0bb5f4;
+}
+.resume .resume_left .resume_profile {
+width: 100%;
+height: 280px;
+}
+.resume .resume_left .resume_profile img {
+width: 100%;
+height: 100%;
+}
+.resume .resume_left .resume_content {
+padding: 0 25px;
+}
+.resume .title {
+margin-bottom: 20px;
+}
+.resume .resume_left .bold {
+color: #fff;
+}
+.resume .resume_left .regular {
+color: #b1eaff;
+}
+.resume .resume_item {
+padding: 25px 0;
+border-bottom: 2px solid #b1eaff;
+}
+
+.resume .resume_left .resume_item:last-child,
+.resume .resume_right .resume_item:last-child {
+border-bottom: 0px;
+}
+
+.resume .resume_left ul li {
+display: flex;
+margin-bottom: 10px;
+align-items: center;
+}
+.resume .resume_left ul li:last-child {
+margin-bottom: 0;
+}
+.resume .resume_left ul li .icon {
+width: 35px;
+height: 35px;
+background: #fff;
+color: #0bb5f4;
+border-radius: 50%;
+margin-right: 15px;
+font-size: 16px;
+position: relative;
+}
+.resume .icon i,
+.resume .resume_right .resume_hobby ul li i {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.resume .resume_left ul li .data {
+color: #b1eaff;
+}
+.resume .resume_left .resume_skills ul li {
+display: flex;
+margin-bottom: 10px;
+color: #b1eaff;
+justify-content: space-between;
+align-items: center;
+}
+.resume .resume_left .resume_skills ul li .skill_name {
+width: 25%;
+}
+.resume .resume_left .resume_skills ul li .skill_progress {
+width: 60%;
+margin: 0 5px;
+height: 5px;
+background: #009fd9;
+position: relative;
+}
+.resume .resume_left .resume_skills ul li .skill_per {
+width: 15%;
+}
+.resume .resume_left .resume_skills ul li .skill_progress span {
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+background: #fff;
+}
+.resume .resume_left .resume_social .semi-bold {
+color: #fff;
+margin-bottom: 3px;
+}
+.resume .resume_right {
+width: 520px;
+background: #fff;
+padding: 25px;
+}
+.resume .resume_right .bold {
+color: #0bb5f4;
+}
+.resume .resume_right .resume_work ul,
+.resume .resume_right .resume_education ul {
+padding-left: 40px;
+overflow: hidden;
+}
+.resume .resume_right ul li {
+position: relative;
+}
+.resume .resume_right ul li .date {
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 15px;
+}
+.resume .resume_right ul li .info {
+margin-bottom: 20px;
+}
+.resume .resume_right ul li:last-child .info {
+margin-bottom: 0;
+}
+.resume .resume_right .resume_work ul li:before,
+.resume .resume_right .resume_education ul li:before {
+content: "";
+position: absolute;
+top: 5px;
+left: -25px;
+width: 6px;
+height: 6px;
+border-radius: 50%;
+border: 2px solid #0bb5f4;
+}
+.resume .resume_right .resume_work ul li:after,
+.resume .resume_right .resume_education ul li:after {
+content: "";
+position: absolute;
+top: 14px;
+left: -21px;
+width: 2px;
+height: 115px;
+background: #0bb5f4;
+}
+.resume .resume_right .resume_hobby ul {
+display: flex;
+justify-content: space-between;
+}
+.resume .resume_right .resume_hobby ul li {
+width: 80px;
+height: 80px;
+border: 2px solid #0bb5f4;
+border-radius: 50%;
+position: relative;
+color: #0bb5f4;
+}
+.resume .resume_right .resume_hobby ul li i {
+font-size: 30px;
+}
+.resume .resume_right .resume_hobby ul li:before {
+content: "";
+position: absolute;
+top: 40px;
+right: -52px;
+width: 50px;
+height: 2px;
+background: #0bb5f4;
+}
+.resume .resume_right .resume_hobby ul li:last-child:before {
+display: none;
+}
+.filter
+{
+color: white;
+font-size: 20px;
+}
+.sort
+{
+color: white;
+font-size: 20px;
+}
+.skills {
+text-align: center;
+color: #fff;
+}

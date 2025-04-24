@@ -1,0 +1,66 @@
+
+<!--Creator: Janani Gokeda
+    File Name: Assignment 1
+    Date:Novomber 3, 2024
+In this "Contact" page, provide a form that includes fields for Name, Email, Message, and a Submit button -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portifolio - Janai Gokeda</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet " href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- linking the html file to css-->
+</head>
+<body>
+    <header class="head1">
+        <nav>
+            <h1>Janai Gokeda</h1>            
+            <ul class="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div style="text-align: center;">                
+                <h1>Contact</h1>
+                <br><br>
+                <p id="middle">Please enter the following information. Fields marked with an asterisk (<span id="neededx">*</span>) are required.</p>
+            </div>
+        </nav>
+        </header>
+        <div id="inside">
+        <form action="/submit" method="POST">
+            <fieldset>
+                <legend>Contact Information</legend>
+                <br>
+                <table>
+                    <tr>
+                        <td><label for="name"><span id="needed1">*</span> Name:</label></td>
+                        <td><input type="text" id="name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="emailaddress"><span id="needed2">*</span> Email Address:</label></td>
+                        <td><input type="email" id="emailaddress" name="emailaddress" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="message">Message:</label></td>
+                        <td><textarea id="message" name="reason" rows="5" cols="30"></textarea></td>
+                    </tr>
+                </table>
+                <br>
+            </fieldset>
+            <button type="submit">Submit</button>
+            <br><br>
+        </form>
+    </div>
+    <!-- adding the footer-->
+    <footer class="Footer">             
+        <nav>
+        <p><span>&copy; Copy rights: 2024 Janai Gokeda  All rights reserved.</span> </p>
+        </nav>
+    </footer>
+</body>
+</html>

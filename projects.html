@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--Creator: Janani Gokeda
+    File Name: Assignment 1
+    Date:Novomber 3, 2024-->
+<!-- This page includes  personal and professional  projects-->     
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portifolio - Janani Gokeda</title>
+    <!-- linking the html file to css-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet " href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+</head>
+<body>
+    <!-- Adding the header-->
+    <header class="head1">
+    <!-- making the header navigation bar-->
+    <nav>
+    <h1>Janani Gokeda</h1>
+    <ul class="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    </ul>
+    </nav>
+    </header>
+    <div class="container">
+        <!-- Adding Project 1-->
+        <div class="project" id="project1">
+            <h2>Project 1: About HomeTown</h2>
+            <p>Brief Description: Create the HTML page about the hometowm which gives the history,landmarks, famous places to visit 
+                and best food to try when visting this place.</p>
+            <p>Date Completed: September 2024</p>
+            <p>Technologies Used: HTML</p>
+            <img src="images/HomeTown.png" alt="HomeTown Screenshot" height = "450">
+        </div>
+        <!-- Adding Project 2-->
+        <div class="project" id="project2" >
+            <h2>Project 2: Personal Infromation registraion using the webform</h2>
+            <p>Brief Description: This project is to develop the webform to register the personal 
+                information using the webform. It contains address, contact details and payment information.</p>
+            <p>Date Completed: October 2024</p>
+            <p>Technologies Used: HTML,CSS,flexbox</p>
+            <img src="images/PersonalInfo.png" alt="webform" height = "450">
+            </div>
+            <!-- Adding Project 3-->
+        <div class="project" id="project3">
+            <h2>Project 3:ToolRentals</h2>
+            <p>Brief Description: This application is designed for the efficient management of tool rental operations, with "Tools" serving as the central entity. The application enables the tracking and management of various entities, such as customers, rental orders, employees, and suppliers.
+                Each tool is categorized by type and category, including hand tools and electric-powered tools.</p>
+            <p>Date Completed: October 2024</p>
+            <p>Technologies Used: MSSM,MSAccess,PostgreSQL</p>
+            <img src="images/ToolRentals_DB.png" alt="Tool Rentals" height = "450">
+        </div>
+        <!-- Adding Project 4-->
+        <div class="project" id="project4">
+            <h2>Project 4: HealthData</h2>
+            <p>Brief Description:This project an Electronic Health Record (EHR) system to store patient health data, including calculations for BMI and target heart rates based on patient information</p>                
+            <p>Date Completed:October 2024</p>
+            <p>Technologies Used: J-Unit Test, Java (Object-Oriented Programming)</p>
+            <img src="images/Health_data.png" alt="Health Data" height = "450" >
+        </div>
+    </div>
+    <div class="buttons">
+        <button onclick="showPrevious()">Previous</button>
+        <button onclick="showNext()">Next</button>
+    </div>
+    <script>
+        let currentProject = 0;
+        const projects = document.querySelectorAll('.project');
+        function showProject(index) {
+            projects.forEach((project, i) => {
+                project.style.display = i === index ? 'block' : 'none';
+            });
+        }
+        function showNext() {
+            currentProject = (currentProject + 1) % projects.length;
+            showProject(currentProject);
+        }
+        function showPrevious() {
+            currentProject = (currentProject - 1 + projects.length) % projects.length;
+            showProject(currentProject);
+        }
+        /* Initialize the first project to be visible */
+        showProject(currentProject);
+    </script>
+</body>
+</html>
